@@ -1,0 +1,62 @@
+log_level: INFO
+img:
+  size: [640, 640]
+  min_size: 416
+  max_size: 640
+  crop_ratio:  1
+  start_ramp: 0
+  end_ramp: 550
+  mean: [ 125.707, 109.054,  98.535 ]
+  std: [ 66.007, 60.502, 59.939 ]
+#  mean: [ 107.363, 103.103,  92.996 ]
+#  std: [ 76.432, 74.831, 80.893 ]
+
+
+
+train:
+  workdir: 'workdir'
+  restore_from_dir: False
+  experiment_name: run1
+  distributed: False
+  dataset: 'data/train_ds.beton'
+  in_memory: True
+  wordsize: 1
+  num_classes: 2
+  epochs: 200
+  batch_size: 64
+  workers: 10
+  gpu: 0
+  lr: 1.5e-4
+  min_lr: 1e-5
+  lr_schedule_type: 'cyclic'    # or 'step'
+  lr_peak_epoch: 2
+  # for step_scheduler
+  step_length: 30
+  step_ratio: 0.1
+  gradient_clip: 0.5
+
+
+
+optim:
+  name: sgd
+  momentum: 0.9
+  weight_decay: 4e-5
+  label_smoothing: 0.1
+  gradient_accumulations: 1
+  milestones: [100]
+  gamma: 0.1
+
+val:
+  size: [640, 640]
+  dataset: 'data//val_ds.beton'
+  every_n_epoch: 5
+  batch_size: 64
+
+
+  tta: False
+  eval_only: False
+  workers: 20
+  in_memory: True
+
+log:
+  level: 1
