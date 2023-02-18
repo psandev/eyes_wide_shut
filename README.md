@@ -19,6 +19,8 @@ The data is here: https://www.dropbox.com/sh/xesbel3lnbw8s8k/AAAfssBACmV__GHoH0o
   
 
 # Ho to run the repo:
+   *  download repo.
+   * create data and workdir folders under repo root.
    *  download and unzip ffcv_dataset.zip and copy both files to data folder.
 
 # Features:
