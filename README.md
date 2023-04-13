@@ -1,8 +1,7 @@
 
-This repo contains a binary classifier. \
-This is the shortest wasy I could think of. \
+This repo contains a binary classifier classifying closed and open eyes.\
 The other option was to annotate the faces and the eyes use an object detect.
-I scrapped from Google a small dataset of ~600 image of persons with open eyes and ! 300 images woth closed eyes.\
+I scrapped from Google a small dataset of ~600 image of persons with open eyes and 300 images with closed eyes.\
 I chose the images the following way: single person, frontal gaze. A relatively close portrait.\
 This is, I think, close your data. The dataset is by no meant comprehensive, somme images contain proprietary logs. I tried to filter them out as much I can,
 but there are still some left. As you know, the human annotator error is about 5% :).\
